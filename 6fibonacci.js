@@ -15,15 +15,15 @@ What is the output of each recursive call?
  */
 
 
-const sumOf = function(list) {
-    // Base case
-    if (list.length === 1) {
-        return list[0];
+function fibonacci(num) {
+    if(num < 2) {
+        return num;
     }
-    // General case
-    return list[0] + sumOf(list.slice(1));
-
+    else {
+        return fibonacci(num-1) + fibonacci(num - 2);
+    }
 }
 
-let lst = [2,4,6,8,10];
-console.log(sumOf(lst));
+
+let num = 6;
+console.log(fibonacci(num));
